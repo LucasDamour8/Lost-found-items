@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Found Item - Lost & Found Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+250 783 722 606</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>22345, Kigali- Rwanda</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-search-location"></i>
+                    <h1>LOST & FOUND HUB</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="report-lost.html">Report Lost</a></li>
+                    <li><a href="report-found.html" class="active">Report Found</a></li>
+                    <li><a href="search-items.html">Search Items</a></li>
+                    <li><a href="announcements.html">Announcements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="section-header">
+                    <h2>Report Found Item</h2>
+                    <p>Help someone by reporting the item you found</p>
+                </div>
+
+                <form id="reportFoundForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Your Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Your Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Item Category *</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="ids">IDs & Documents</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="wallets">Wallets & Purses</option>
+                                <option value="keys">Keys</option>
+                                <option value="personal">Personal Items</option>
+                                <option value="bags">Bags & Luggage</option>
+                                <option value="jewelry">Jewelry</option>
+                                <option value="clothing">Clothing</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="itemName">Item Description/Name *</label>
+                        <input type="text" id="itemName" name="itemName" placeholder="e.g., Blue iPhone 13" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Detailed Description *</label>
+                        <textarea id="description" name="description" placeholder="Describe the item (color, brand, condition, unique features)" required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="foundDate">Date Found *</label>
+                            <input type="date" id="foundDate" name="foundDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="foundTime">Approximate Time</label>
+                            <input type="time" id="foundTime" name="foundTime">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location Where Found *</label>
+                        <input type="text" id="location" name="location" placeholder="e.g., Bus Stop on Main Street" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentLocation">Current Location of Item *</label>
+                        <select id="currentLocation" name="currentLocation" required>
+                            <option value="">Select Location</option>
+                            <option value="personal">With me (Personal custody)</option>
+                            <option value="police">Police Station</option>
+                            <option value="office">Lost & Found Office</option>
+                            <option value="business">Business/Store</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="additionalInfo">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" placeholder="Any other relevant details"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload Photos *</label>
+                        <div class="file-upload" id="fileUpload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Click to upload or drag and drop</p>
+                            <span>At least 1 photo required (Maximum 5 photos - JPG, PNG)</span>
+                            <input type="file" id="photos" name="photos" multiple accept="image/*" style="display: none;" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" required>
+                            I confirm that I have found this item and the information provided is accurate *
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Found Report</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lost & Found Hub</h3>
+                    <p>Helping people reunite with their lost belongings</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="report-lost.html">Report Lost</a></li>
+                        <li><a href="report-found.html">Report Found</a></li>
+                        <li><a href="search-items.html">Search Items</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +250 783 722 606</li>
+                        <li><a href="mailto:info@lostandfound.com">info@lostandfound.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> 22345, Kigali-Rwanda</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lost & Found Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Lost & Found Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+250 783722606</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>22345, Kigali- Rwanda</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-search-location"></i>
+                    <h1>LOST & FOUND HUB</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="report-lost.html">Report Lost</a></li>
+                    <li><a href="report-found.html">Report Found</a></li>
+                    <li><a href="search-items.html">Search Items</a></li>
+                    <li><a href="announcements.html">Announcements</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="search-header">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We're here to help. Reach out to us anytime!</p>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0; background: #f8f9fa;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px;">
+                <!-- Contact Card 1 -->
+                <div style="background: white; padding: 40px; text-align: center; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div style="width: 80px; height: 80px; background: #FFD500; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-phone" style="font-size: 32px; color: #000;"></i>
+                    </div>
+                    <h3 style="color: #1a3a5c; margin-bottom: 15px;">Call Us</h3>
+                    <p style="color: #666; margin-bottom: 10px;">Monday - Friday: 9AM - 6PM</p>
+                    <a href="tel:+18183334455" style="color: #FFD500; font-weight: bold; font-size: 20px;">+250783722606</a>
+                </div>
+
+                <!-- Contact Card 2 -->
+                <div style="background: white; padding: 40px; text-align: center; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div style="width: 80px; height: 80px; background: #FFD500; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-envelope" style="font-size: 32px; color: #000;"></i>
+                    </div>
+                    <h3 style="color: #1a3a5c; margin-bottom: 15px;">Email Us</h3>
+                    <p style="color: #666; margin-bottom: 10px;">We'll respond within 24 hours</p>
+                    <a href="mailto:info@lostandfound.com" style="color: #FFD500; font-weight: bold;">info@lostandfound.com</a>
+                </div>
+
+                <!-- Contact Card 3 -->
+                <div style="background: white; padding: 40px; text-align: center; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div style="width: 80px; height: 80px; background: #FFD500; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-map-marker-alt" style="font-size: 32px; color: #000;"></i>
+                    </div>
+                    <h3 style="color: #1a3a5c; margin-bottom: 15px;">Visit Us</h3>
+                    <p style="color: #666; margin-bottom: 10px;">Office Hours: 9AM - 5PM</p>
+                    <p style="color: #666; font-weight: bold;">22345, Kigali- Rwanda</p>
+                </div>
+            </div>
+
+            <!-- Contact Form and Map -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <!-- Contact Form -->
+                <div style="background: white; padding: 50px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="color: #1a3a5c; margin-bottom: 30px;">Send us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select Subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="item">Item Related Question</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Map and Additional Info -->
+                <div>
+                    <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                        <h3 style="color: #1a3a5c; margin-bottom: 20px;">Office Hours</h3>
+                        <div style="color: #666; line-height: 2;">
+                            <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+                            <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM</p>
+                            <p><strong>Sunday:</strong> Closed</p>
+                        </div>
+                    </div>
+
+                    <div style="background: #e9ecef; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center;">
+                            <i class="fas fa-map-marked-alt" style="font-size: 64px; color: #1a3a5c; margin-bottom: 15px;"></i>
+                            <p style="color: #666;">Interactive Map</p>
+                            <p style="color: #999; font-size: 14px;">22345, Kigali - Rwanda</p>
+                        </div>
+                    </div>
+
+                    <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-top: 30px;">
+                        <h3 style="color: #1a3a5c; margin-bottom: 20px;">Follow Us</h3>
+                        <div style="display: flex; gap: 15px;">
+                            <a href="#" style="width: 50px; height: 50px; background: #FFD500; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #000; font-size: 24px;">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" style="width: 50px; height: 50px; background: #FFD500; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #000; font-size: 24px;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" style="width: 50px; height: 50px; background: #FFD500; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #000; font-size: 24px;">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" style="width: 50px; height: 50px; background: #FFD500; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #000; font-size: 24px;">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 25px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h4 style="color: #1a3a5c; margin-bottom: 10px;">How long does it take to process a report?</h4>
+                    <p style="color: #666;">Reports are typically processed within 24 hours. You'll receive an email confirmation once your item is added to our database.</p>
+                </div>
+                <div style="background: white; padding: 25px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h4 style="color: #1a3a5c; margin-bottom: 10px;">Is there a fee for using this service?</h4>
+                    <p style="color: #666;">No, our basic service is completely free. We believe in helping people reunite with their lost belongings at no cost.</p>
+                </div>
+                <div style="background: white; padding: 25px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h4 style="color: #1a3a5c; margin-bottom: 10px;">How do I claim a found item?</h4>
+                    <p style="color: #666;">When you find a match, click "Claim Item" and provide verification details. The finder will be notified and we'll help coordinate the reunion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lost & Found Hub</h3>
+                    <p>Helping people reunite with their lost belongings</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="report-lost.html">Report Lost</a></li>
+                        <li><a href="report-found.html">Report Found</a></li>
+                        <li><a href="search-items.html">Search Items</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +250783722606/li>
+                        <li><i class="fas fa-envelope"></i> info@lostandfound.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 22345, kigali- Rwanda</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lost & Found Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

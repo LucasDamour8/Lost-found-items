@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Items - Lost & Found Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+250 783 722 606</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>22345, Kigali- Rwanda</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-search-location"></i>
+                    <h1>LOST & FOUND HUB</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="report-lost.html">Report Lost</a></li>
+                    <li><a href="report-found.html">Report Found</a></li>
+                    <li><a href="search-items.html" class="active">Search Items</a></li>
+                    <li><a href="announcements.html">Announcements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="search-header">
+        <div class="container">
+            <h2>Search Lost & Found Items</h2>
+            <p>Search our comprehensive database to find your lost items</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by item name, description, location...">
+                <button><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="filters">
+        <div class="container">
+            <div class="filter-group">
+                <select>
+                    <option>All Categories</option>
+                    <option>IDs & Documents</option>
+                    <option>Electronics</option>
+                    <option>Wallets & Purses</option>
+                    <option>Keys</option>
+                    <option>Personal Items</option>
+                    <option>Bags & Luggage</option>
+                    <option>Jewelry</option>
+                    <option>Clothing</option>
+                </select>
+                <select>
+                    <option>All Status</option>
+                    <option>Lost</option>
+                    <option>Found</option>
+                    <option>Claimed</option>
+                </select>
+                <select>
+                    <option>All Locations</option>
+                    <option>Downtown</option>
+                    <option>Central Park</option>
+                    <option>Shopping Mall</option>
+                    <option>Public Transport</option>
+                </select>
+                <select>
+                    <option>Sort by: Latest</option>
+                    <option>Sort by: Oldest</option>
+                    <option>Sort by: Location</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="items-grid">
+        <div class="container">
+            <div class="features-grid">
+                <!-- Sample Item 1 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">Black Leather Wallet</h3>
+                        <div class="item-meta">
+                            <span><i class="fas fa-tag"></i> Wallets & Purses</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Central Station</span>
+                            <span><i class="fas fa-calendar"></i> Dec 10, 2024</span>
+                        </div>
+                        <span class="status-badge status-lost">LOST</span>
+                        <p style="margin: 10px 0; color: #666;">Black leather wallet with credit cards inside. Lost near platform 3.</p>
+                        <button class="btn btn-primary" style="width: 100%; padding: 10px;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Sample Item 2 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">iPhone 13 Pro Blue</h3>
+                        <div class="item-meta">
+                            <span><i class="fas fa-tag"></i> Electronics</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Shopping Mall</span>
+                            <span><i class="fas fa-calendar"></i> Dec 9, 2024</span>
+                        </div>
+                        <span class="status-badge status-found">FOUND</span>
+                        <p style="margin: 10px 0; color: #666;">Blue iPhone 13 Pro found in food court area. Has a case with floral design.</p>
+                        <button class="btn btn-primary" style="width: 100%; padding: 10px;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Sample Item 3 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">Driver's License</h3>
+                        <div class="item-meta">
+                            <span><i class="fas fa-tag"></i> IDs & Documents</span>
+                            <span><i class="fas fa-map-marker-alt"></i> City Library</span>
+                            <span><i class="fas fa-calendar"></i> Dec 8, 2024</span>
+                        </div>
+                        <span class="status-badge status-found">FOUND</span>
+                        <p style="margin: 10px 0; color: #666;">California driver's license found on second floor reading area.</p>
+                        <button class="btn btn-primary" style="width: 100%; padding: 10px;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Sample Item 4 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">House Keys with Blue Keychain</h3>
+                        <div class="item-meta">
+                            <span><i class="fas fa-tag"></i> Keys</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Park Avenue</span>
+                            <span><i class="fas fa-calendar"></i> Dec 7, 2024</span>
+                        </div>
+                        <span class="status-badge status-lost">LOST</span>
+                        <p style="margin: 10px 0; color: #666;">Set of 3 keys with blue rubber keychain. Lost near coffee shop.</p>
+                        <button class="btn btn-primary" style="width: 100%; padding: 10px;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Sample Item 5 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <i class="fas fa-backpack"></i>
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">Red Backpack</h3>
+                        <div class="item-meta">
+                            <span><i class="fas fa-tag"></i> Bags & Luggage</span>
+                            <span><i class="fas fa-map-marker-alt"></i> University Campus</span>
+                            <span><i class="fas fa-calendar"></i> Dec 6, 2024</span>
+                        </div>
+                        <span class="status-badge status-found">FOUND</span>
+                        <p style="margin: 10px 0; color: #666;">Red Nike backpack found in library. Contains textbooks and laptop.</p>
+                        <button class="btn btn-primary" style="width: 100%; padding: 10px;">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Sample Item 6 -->
+                <div class="item-card">
+                    <div class="item-image">
+                        <i class="fas fa-watch"></i>
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-title">Silver Watch</h3>
+                        <div class="item-meta">
+                            <span><i class="fas fa-tag"></i> Jewelry</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Gym Center</span>
+                            <span><i class="fas fa-calendar"></i> Dec 5, 2024</span>
+                        </div>
+                        <span class="status-badge status-lost">LOST</span>
+                        <p style="margin: 10px 0; color: #666;">Silver Seiko watch with leather strap. Lost in locker room.</p>
+                        <button class="btn btn-primary" style="width: 100%; padding: 10px;">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="btn btn-primary">Load More Items</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lost & Found Hub</h3>
+                    <p>Helping people reunite with their lost belongings</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="report-lost.html">Report Lost</a></li>
+                        <li><a href="report-found.html">Report Found</a></li>
+                        <li><a href="search-items.html">Search Items</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +250 783 722 606</li>
+                        <li><i class="fas fa-envelope"></i> info@lostandfound.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 22345, Kigali- Rwanda</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lost & Found Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

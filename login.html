@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Lost & Found Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+250 783 722 606</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>22345, Kigali- Rwanda</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-search-location"></i>
+                    <h1>LOST & FOUND HUB</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="report-lost.html">Report Lost</a></li>
+                    <li><a href="report-found.html">Report Found</a></li>
+                    <li><a href="search-items.html">Search Items</a></li>
+                    <li><a href="announcements.html">Announcements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section style="padding: 140px 0 80px; background: linear-gradient(135deg, #1a3a5c 0%, #2d5a8c 100%);">
+        <div class="container">
+            <div style="max-width: 450px; margin: 0 auto; background: white; padding: 50px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                <!-- Login Form -->
+                <div id="loginForm">
+                    <div style="text-align: center; margin-bottom: 40px;">
+                        <i class="fas fa-user-circle" style="font-size: 64px; color: #FFD500; margin-bottom: 15px;"></i>
+                        <h2 style="color: #1a3a5c; margin-bottom: 10px;">Welcome Back</h2>
+                        <p style="color: #666;">Login to your account</p>
+                    </div>
+
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address *</label>
+                            <input type="email" id="loginEmail" name="loginEmail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loginPassword">Password *</label>
+                            <input type="password" id="loginPassword" name="loginPassword" required>
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox">
+                                <span style="color: #666;">Remember me</span>
+                            </label>
+                            <a href="#" style="color: #FFD500; text-decoration: none;">Forgot Password?</a>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Login</button>
+
+                        <div style="text-align: center; margin-top: 25px; padding-top: 25px; border-top: 1px solid #e0e0e0;">
+                            <p style="color: #666;">Don't have an account? 
+                                <a href="#" onclick="toggleForms(); return false;" style="color: #FFD500; text-decoration: none; font-weight: bold;">Sign Up</a>
+                            </p>
+                        </div>
+                    </form>
+
+                    <div style="margin-top: 30px;">
+                        <p style="text-align: center; color: #999; margin-bottom: 15px;">Or login with</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <button style="padding: 12px; border: 1px solid #e0e0e0; background: white; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                                <i class="fab fa-google" style="color: #db4437;"></i>
+                                <span>Google</span>
+                            </button>
+                            <button style="padding: 12px; border: 1px solid #e0e0e0; background: white; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                                <i class="fab fa-facebook" style="color: #4267B2;"></i>
+                                <span>Facebook</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Register Form -->
+                <div id="registerForm" style="display: none;">
+                    <div style="text-align: center; margin-bottom: 40px;">
+                        <i class="fas fa-user-plus" style="font-size: 64px; color: #FFD500; margin-bottom: 15px;"></i>
+                        <h2 style="color: #1a3a5c; margin-bottom: 10px;">Create Account</h2>
+                        <p style="color: #666;">Sign up to get started</p>
+                    </div>
+
+                    <form>
+                        <div class="form-group">
+                            <label for="registerName">Full Name *</label>
+                            <input type="text" id="registerName" name="registerName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerEmail">Email Address *</label>
+                            <input type="email" id="registerEmail" name="registerEmail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerPhone">Phone Number *</label>
+                            <input type="tel" id="registerPhone" name="registerPhone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerPassword">Password *</label>
+                            <input type="password" id="registerPassword" name="registerPassword" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password *</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: start; gap: 10px; cursor: pointer;">
+                                <input type="checkbox" required>
+                                <span style="color: #666; font-size: 14px;">I agree to the Terms of Service and Privacy Policy</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Create Account</button>
+
+                        <div style="text-align: center; margin-top: 25px; padding-top: 25px; border-top: 1px solid #e0e0e0;">
+                            <p style="color: #666;">Already have an account? 
+                                <a href="#" onclick="toggleForms(); return false;" style="color: #FFD500; text-decoration: none; font-weight: bold;">Login</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lost & Found Hub</h3>
+                    <p>Helping people reunite with their lost belongings</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="report-lost.html">Report Lost</a></li>
+                        <li><a href="report-found.html">Report Found</a></li>
+                        <li><a href="search-items.html">Search Items</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +250 783 722 606</li>
+                        <li><i class="fas fa-envelope"></i> info@lostandfound.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 22345, Kigali- Rwanda</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lost & Found Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleForms() {
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
