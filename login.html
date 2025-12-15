@@ -4,225 +4,490 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Lost & Found Hub</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <header class="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+250 783 722 606</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>22345, Kigali- Rwanda</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <i class="fas fa-search-location"></i>
-                    <h1>LOST & FOUND HUB</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="report-lost.html">Report Lost</a></li>
-                    <li><a href="report-found.html">Report Found</a></li>
-                    <li><a href="search-items.html">Search Items</a></li>
-                    <li><a href="announcements.html">Announcements</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="login.html" class="btn-login">Login</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <section style="padding: 140px 0 80px; background: linear-gradient(135deg, #1a3a5c 0%, #2d5a8c 100%);">
-        <div class="container">
-            <div style="max-width: 450px; margin: 0 auto; background: white; padding: 50px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                <!-- Login Form -->
- <p style="color: #666;">ADMIN PANEL? 
-  <a href="admin/dashboard.html" target="_blank" style="color: #FFD500; text-decoration: none; font-weight: bold;">ADMIN PANEL</a>
-</p>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #071626 0%, #1a3a5c 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-                <div id="loginForm">
-                    <div style="text-align: center; margin-bottom: 40px;">
-                        <i class="fas fa-user-circle" style="font-size: 64px; color: #FFD500; margin-bottom: 15px;"></i>
-                        <h2 style="color: #1a3a5c; margin-bottom: 10px;">Welcome Back</h2>
-                        <p style="color: #666;">Login to your account</p>
-                    </div>
+        .login-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            max-width: 1000px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
 
-                    <form>
-                        <div class="form-group">
-                            <label for="loginEmail">Email Address *</label>
-                            <input type="email" id="loginEmail" name="loginEmail" required>
-                        </div>
+        .login-left {
+            background: linear-gradient(135deg, #FFD500 0%, #FFA500 100%);
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
-                        <div class="form-group">
-                            <label for="loginPassword">Password *</label>
-                            <input type="password" id="loginPassword" name="loginPassword" required>
-                        </div>
+        .login-left i {
+            font-size: 80px;
+            color: #071626;
+            margin-bottom: 30px;
+        }
 
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
-                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                                <input type="checkbox">
-                                <span style="color: #666;">Remember me</span>
-                            </label>
-                            <a href="#" style="color: #FFD500; text-decoration: none;">Forgot Password?</a>
-                        </div>
+        .login-left h2 {
+            color: #071626;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
 
-                        <button type="submit" class="btn-submit">Login</button>
+        .login-left p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
 
-                        <div style="text-align: center; margin-top: 25px; padding-top: 25px; border-top: 1px solid #e0e0e0;">
-                            <p style="color: #666;">Don't have an account? 
-                                <a href="#" onclick="toggleForms(); return false;" style="color: #FFD500; text-decoration: none; font-weight: bold;">Sign Up</a>
-                            </p>
-                        </div>
-                    </form>
+        .login-right {
+            padding: 60px 40px;
+        }
 
-                    <div style="margin-top: 30px;">
-                        <p style="text-align: center; color: #999; margin-bottom: 15px;">Or login with</p>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                            <button style="padding: 12px; border: 1px solid #e0e0e0; background: white; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                                <i class="fab fa-google" style="color: #db4437;"></i>
-                                <span>Google</span>
-                            </button>
-                            <button style="padding: 12px; border: 1px solid #e0e0e0; background: white; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                                <i class="fab fa-facebook" style="color: #4267B2;"></i>
-                                <span>Facebook</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+        .login-header {
+            margin-bottom: 40px;
+        }
 
-                <!-- Register Form -->
-                <div id="registerForm" style="display: none;">
-                    <div style="text-align: center; margin-bottom: 40px;">
-                        <i class="fas fa-user-plus" style="font-size: 64px; color: #FFD500; margin-bottom: 15px;"></i>
-                        <h2 style="color: #1a3a5c; margin-bottom: 10px;">Create Account</h2>
-                        <p style="color: #666;">Sign up to get started</p>
-                    </div>
+        .login-header h1 {
+            color: #071626;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
 
-                    <form>
-                        <div class="form-group">
-                            <label for="registerName">Full Name *</label>
-                            <input type="text" id="registerName" name="registerName" required>
-                        </div>
+        .login-header p {
+            color: #666;
+            font-size: 14px;
+        }
 
-                        <div class="form-group">
-                            <label for="registerEmail">Email Address *</label>
-                            <input type="email" id="registerEmail" name="registerEmail" required>
-                        </div>
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
 
-                        <div class="form-group">
-                            <label for="registerPhone">Phone Number *</label>
-                            <input type="tel" id="registerPhone" name="registerPhone" required>
-                        </div>
+        .tab {
+            padding: 12px 24px;
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
 
-                        <div class="form-group">
-                            <label for="registerPassword">Password *</label>
-                            <input type="password" id="registerPassword" name="registerPassword" required>
-                        </div>
+        .tab.active {
+            color: #FFD500;
+            border-bottom-color: #FFD500;
+        }
 
-                        <div class="form-group">
-                            <label for="confirmPassword">Confirm Password *</label>
-                            <input type="password" id="confirmPassword" name="confirmPassword" required>
-                        </div>
+        .form-group {
+            margin-bottom: 25px;
+        }
 
-                        <div class="form-group">
-                            <label style="display: flex; align-items: start; gap: 10px; cursor: pointer;">
-                                <input type="checkbox" required>
-                                <span style="color: #666; font-size: 14px;">I agree to the Terms of Service and Privacy Policy</span>
-                            </label>
-                        </div>
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #071626;
+            font-weight: 600;
+            font-size: 14px;
+        }
 
-                        <button type="submit" class="btn-submit">Create Account</button>
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
 
-                        <div style="text-align: center; margin-top: 25px; padding-top: 25px; border-top: 1px solid #e0e0e0;">
-                            <p style="color: #666;">Already have an account? 
-                                <a href="#" onclick="toggleForms(); return false;" style="color: #FFD500; text-decoration: none; font-weight: bold;">Login</a>
-                            </p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+        .form-group input:focus {
+            outline: none;
+            border-color: #FFD500;
+        }
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Lost & Found Hub</h3>
-                    <p>Helping people reunite with their lost belongings</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="report-lost.html">Report Lost</a></li>
-                        <li><a href="report-found.html">Report Found</a></li>
-                        <li><a href="search-items.html">Search Items</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> +250 783 722 606</li>
-                        <li><i class="fas fa-envelope"></i> info@lostandfound.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 22345, Kigali- Rwanda</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Lost & Found Hub. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        .password-wrapper {
+            position: relative;
+        }
 
-    <script src="script.js"></script>
-    <script>
-        function toggleForms() {
-            const loginForm = document.getElementById('loginForm');
-            const registerForm = document.getElementById('registerForm');
-            
-            if (loginForm.style.display === 'none') {
-                loginForm.style.display = 'block';
-                registerForm.style.display = 'none';
-            } else {
-                loginForm.style.display = 'none';
-                registerForm.style.display = 'block';
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 25px;
+        }
+
+        .forgot-password a {
+            color: #FFD500;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: #FFD500;
+            color: #071626;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #FFA500;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 213, 0, 0.3);
+        }
+
+        .btn-submit:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .alert {
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .alert-error {
+            background: #fee;
+            color: #c33;
+            border: 1px solid #fcc;
+        }
+
+        .alert-success {
+            background: #efe;
+            color: #3c3;
+            border: 1px solid #cfc;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-home a {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-home a:hover {
+            color: #FFD500;
+        }
+
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: #071626;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .login-container {
+                grid-template-columns: 1fr;
+            }
+
+            .login-left {
+                display: none;
+            }
+
+            .login-right {
+                padding: 40px 30px;
             }
         }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-left">
+            <i class="fas fa-search-location"></i>
+            <h2>Lost & Found Hub</h2>
+            <p>Welcome back! Login to access your admin dashboard and manage lost and found items efficiently.</p>
+        </div>
+
+        <div class="login-right">
+            <div class="login-header">
+                <h1>Welcome Back</h1>
+                <p>Login to your account or create a new one</p>
+            </div>
+
+            <div class="tabs">
+                <button class="tab active" data-tab="login">Login</button>
+                <button class="tab" data-tab="register">Register</button>
+            </div>
+
+            <div id="alertBox"></div>
+
+            <!-- Login Form -->
+            <div id="loginForm" class="form-section active">
+                <form id="loginFormElement">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="loginPassword" required placeholder="Enter your password">
+                            <button type="button" class="password-toggle" onclick="togglePassword('loginPassword')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="forgot-password">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span id="loginBtnText">Login</span>
+                        <span id="loginBtnLoader" class="loading" style="display: none;"></span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Register Form -->
+            <div id="registerForm" class="form-section">
+                <form id="registerFormElement">
+                    <div class="form-group">
+                        <label for="regName">Full Name</label>
+                        <input type="text" id="regName" required placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regEmail">Email Address</label>
+                        <input type="email" id="regEmail" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regPhone">Phone Number</label>
+                        <input type="tel" id="regPhone" required placeholder="+250783722606">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="regPassword" required placeholder="Create a password">
+                            <button type="button" class="password-toggle" onclick="togglePassword('regPassword')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regConfirmPassword">Confirm Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="regConfirmPassword" required placeholder="Confirm your password">
+                            <button type="button" class="password-toggle" onclick="togglePassword('regConfirmPassword')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span id="regBtnText">Create Account</span>
+                        <span id="regBtnLoader" class="loading" style="display: none;"></span>
+                    </button>
+
+                    <p style="margin-top: 15px; font-size: 13px; color: #666; text-align: center;">
+                        Note: Your account will need admin approval before you can access the dashboard.
+                    </p>
+                </form>
+            </div>
+
+            <div class="back-home">
+                <a href="../index.html">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { loginUser, registerUser, checkUserApproval } from './firebase-config.js';
+
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabName = tab.dataset.tab;
+                
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                document.querySelectorAll('.form-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                document.getElementById(tabName + 'Form').classList.add('active');
+                clearAlert();
+            });
+        });
+
+        // Login form
+        document.getElementById('loginFormElement').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            showLoading('login', true);
+            clearAlert();
+            
+            const result = await loginUser(email, password);
+            
+            if (result.success) {
+                // Check if user is approved
+                const isApproved = await checkUserApproval(result.user.uid);
+                
+                if (isApproved) {
+                    showAlert('Login successful! Redirecting...', 'success');
+                    setTimeout(() => {
+                        window.location.href = 'admin/dashboard.html';
+                    }, 1000);
+                } else {
+                    showAlert('Your account is pending admin approval. Please wait for approval to access the dashboard.', 'error');
+                    showLoading('login', false);
+                }
+            } else {
+                showAlert(result.error, 'error');
+                showLoading('login', false);
+            }
+        });
+
+        // Register form
+        document.getElementById('registerFormElement').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('regName').value;
+            const email = document.getElementById('regEmail').value;
+            const phone = document.getElementById('regPhone').value;
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regConfirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                showAlert('Passwords do not match!', 'error');
+                return;
+            }
+            
+            showLoading('reg', true);
+            clearAlert();
+            
+            const result = await registerUser(email, password, { name, phone });
+            
+            if (result.success) {
+                showAlert('Account created successfully! Please wait for admin approval.', 'success');
+                document.getElementById('registerFormElement').reset();
+                
+                setTimeout(() => {
+                    document.querySelector('[data-tab="login"]').click();
+                }, 2000);
+            } else {
+                showAlert(result.error, 'error');
+            }
+            
+            showLoading('reg', false);
+        });
+
+        function showLoading(form, show) {
+            const btnText = document.getElementById(form + 'BtnText');
+            const btnLoader = document.getElementById(form + 'BtnLoader');
+            const btn = btnText.closest('button');
+            
+            if (show) {
+                btnText.style.display = 'none';
+                btnLoader.style.display = 'inline-block';
+                btn.disabled = true;
+            } else {
+                btnText.style.display = 'inline';
+                btnLoader.style.display = 'none';
+                btn.disabled = false;
+            }
+        }
+
+        function showAlert(message, type) {
+            const alertBox = document.getElementById('alertBox');
+            alertBox.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
+        }
+
+        function clearAlert() {
+            document.getElementById('alertBox').innerHTML = '';
+        }
+
+        window.togglePassword = function(inputId) {
+            const input = document.getElementById(inputId);
+            const icon = input.nextElementSibling.querySelector('i');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        };
     </script>
 </body>
-
 </html>
-
